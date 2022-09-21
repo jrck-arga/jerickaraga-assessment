@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="bg-container"> <!-- div for image -->
+        <img src="./img/bg-image.jpg" alt="" class="bg-image">
+    </div>
+    
+    <div id="main-container"> <!-- div container -->
+
+        <!-- Start of Navigation Bar -->
+        <nav> 
+            <div class="web-logo">
+                <img src="./img/oa-logo.png" alt="">
+            </div>
+            <ul>
+                <li><a href="#">About OA</a></li>
+                <li><a href="#">About SP</a></li>
+                <li><a href="#">Login</a></li>
+                <div class="nav-footer">
+                    © Jerick Araga </br> Assessment All Rights Reserve :)
+                </div>
+            </ul>
+            <div class="nav-hamburger" id="nav-burger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            
+        </nav>
+        <!-- End of Navigation Bar -->
+
+        <!-- Start of Page Title Headings -->
+        <div class="web-header-text">
+            <h2>Data to enrich your </br> <span>offshore business</span> </h2>
+            <p>Anim aute id magna aliqua ad ad non deserunt sunt. Qui
+                irure qui lorem cupidatat commodo. Elit Sunt amet fugiat
+                veniam occaecat fuguiat aliqua.</p>
+
+            <ul>
+                <li><a href="#" class="active--2">Get started</a></li>
+                <li><a href="#">View recent leads</a></li>
+            </ul>
+        </div>
+        <!-- End of Page Title Headings -->
+    </div>
+    
+
+</body>
+</html>
+
+<script>
+
+    const actBtn = document.querySelector('.web-header-text').querySelectorAll("a");
+    const burgerBtn = document.querySelector('.nav-hamburger');
+    const navAct = document.querySelector('nav ul');
+
+    actBtn.forEach(element => {
+        element.addEventListener("click", function(){
+            actBtn.forEach( btn => {
+                btn.classList.remove("active--2")
+            });
+            this.classList.add("active--2");
+        });
+    });
+
+    burgerBtn.addEventListener("click", (e) => {
+            burgerBtn.classList.toggle("is-active");
+            navAct.classList.toggle("is-active");
+    });
+
+
+</script>
